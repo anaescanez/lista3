@@ -8,26 +8,35 @@
         <?php
         echo "Exercício 1 <br>";
         
-        $num=1;
+        $numero_inicial = 16;
+			echo $numero_inicial."<br>";
+			function numero_primo ($primo) :bool{
+				$cont =0;
+				for ($i=1 ; $i <= $primo ; $i++) { 
+					if ($primo % $i == 0) {
+							$cont++;
+						}	
+				}
+				if ($cont == 2){
+					return true;
+				}else{
+					return false;
+				}
+			}
+			if (numero_primo($numero_inicial)) {
+				echo "Número primo";
+			}else{
+				echo "Número composto";
+			}
         
-        function numero_primo ($num){
-        $count=0;
-         for ($i=1;$i<=$num;$i++){
-             if ($num % $i == 0){
-                 $count=$count+1;
-             }
-         }
-         if ($count == 2 ){
-             echo "É primo!";
-             
-         }else{
-             echo "É composto!";
-         }
-        }
-        numero_primo($num);
         
         echo "<br> Exercício 2 <br>";
         
+        for ($j=1; $j <= 100 ; $j++) { 
+				if (numero_primo($j)) {
+					echo $j." ";
+				}
+			}
         
         ?>
         <ul>
