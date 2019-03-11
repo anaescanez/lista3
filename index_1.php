@@ -33,10 +33,10 @@
         echo "<br> Exercício 2 <br>";
         
         for ($j=1; $j <= 100 ; $j++) { 
-				if (numero_primo($j)) {
-					echo $j." ";
-				}
-			}
+		if (numero_primo($j)) {
+			echo $j." ";
+		}
+	}
         
         ?>
         <ul>
